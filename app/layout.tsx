@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import ResponsiveSidebar from "@/components/common/responsive-sidebar";
 
 export const metadata: Metadata = {
   title: "Edufiche - Votre plateforme de révision",
@@ -22,7 +23,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ResponsiveSidebar>{children}</ResponsiveSidebar>
         </ThemeProvider>
       </body>
     </html>
