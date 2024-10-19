@@ -4,8 +4,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
-import BreadcrumbComponent from "@/components/sidebar/BreadcrumbComponent";
 import { AppSidebar } from "./app-sidebar";
+import BreadcrumbComponent from "./breadcrumb-component";
 
 const CombinedSidebar = ({ children }: { children: React.ReactNode }) => {
   return (

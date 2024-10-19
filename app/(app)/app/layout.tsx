@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import "../../globals.css";
 import { defaultMetadata } from "@/utils/metadata";
 import { CSPostHogProvider } from "@/providers/post-hog-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
-import CombinedSidebar from "@/components/sidebar/CombinedSidebar";
+import CombinedSidebar from "@/components/sidebar/combined-sidebar";
 
 export const metadata: Metadata = defaultMetadata;
 

@@ -43,7 +43,7 @@ const LoginForm = () => {
     await signIn.email({
       email: values.email,
       password: values.password,
-      callbackURL: "/",
+      callbackURL: "/app",
     });
 
     setIsLoading(false);

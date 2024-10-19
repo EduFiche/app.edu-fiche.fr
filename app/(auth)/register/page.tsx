@@ -68,7 +68,7 @@ export default function PageInscription() {
       email: values.email,
       password: values.password,
       name: values.name,
-      callbackURL: "/",
+      callbackURL: "/app",
     });
 
     sendEvent("user-welcome", values.email);

@@ -5,5 +5,6 @@ export default authMiddleware({
 });
 
 export const config = {
-  matcher: ["/((?!login|register).)*"],
+  // use middleware on all routes except login and register
+  matcher: ["/app"],
 };
