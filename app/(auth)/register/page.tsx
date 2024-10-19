@@ -14,6 +14,7 @@ import {
 import { createAuthClient } from "better-auth/react";
 import SignInButtons from "../_components/SignInButtons";
 import RegistrationForm from "./_components/RegistrationForm";
+import { usePlunk } from "@/hooks/use-plunk";
 
 const formSchema = z
   .object({
@@ -36,6 +37,7 @@ const formSchema = z
 export default function PageInscription() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { signUp, signIn } = createAuthClient();
+  const { sendEvent } = usePlunk();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -68,6 +70,8 @@ export default function PageInscription() {
       name: values.name,
       callbackURL: "/",
     });
+
+    sendEvent("user-welcome", values.email);
 
     setIsLoading(false);
   }
