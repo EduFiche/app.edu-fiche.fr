@@ -18,12 +18,14 @@ export default function LoginPage() {
   const signInGithub = async () => {
     await signIn.social({
       provider: "github",
+      callbackURL: "/app",
     });
   };
 
   const signInGoogle = async () => {
     await signIn.social({
       provider: "google",
+      callbackURL: "/app",
     });
   };
   return (

@@ -52,12 +52,14 @@ export default function PageInscription() {
   const signInGithub = async () => {
     await signIn.social({
       provider: "github",
+      callbackURL: "/app",
     });
   };
 
   const signInGoogle = async () => {
     await signIn.social({
       provider: "google",
+      callbackURL: "/app",
     });
   };
 
