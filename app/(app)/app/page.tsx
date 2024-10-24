@@ -1,3 +1,3 @@
-export default function Home() {
-  return <div className="p-4 w-full">hello world</div>;
+export default function Page() {
+  return <div>hello world</div>;
 }

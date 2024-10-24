@@ -14,6 +14,8 @@ const BreadcrumbComponent = () => {
 
   const labels: { [key: string]: string } = {
     app: "Home",
+    courses: "Vos cours",
+    stats: "Statistiques",
   };
 
   return (

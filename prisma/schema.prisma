@@ -56,3 +56,15 @@ model Verification {
 
   @@map("verification")
 }
+
+
+model courses {
+  id        String   @id
+  name      String
+  createdAt DateTime
+  updatedAt DateTime
+  numberOfLikes Int @default(0)
+  
+
+  @@map("courses")
+}

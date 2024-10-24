@@ -1,7 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { BookOpen, Bot, LayoutDashboard, Sparkle, Sparkles, Star } from "lucide-react";
+import {
+  BookOpen,
+  Bot,
+  LayoutDashboard,
+  Sparkle,
+  Sparkles,
+  Star,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -31,28 +38,28 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     navMain: [
       {
         title: "Dashboard",
-        url: "#",
+        url: "/app",
         icon: LayoutDashboard,
         isActive: true,
         items: [
           {
             title: "Accueil",
-            url: "#",
+            url: "/app",
           },
         ],
       },
       {
-        title: "Vos dossiers",
-        url: "#",
+        title: "Vos cours",
+        url: "/app/courses",
         icon: Bot,
         items: [
           {
             title: "Accueil",
-            url: "#",
+            url: "/app/courses",
           },
           {
             title: "Statistiques",
-            url: "#",
+            url: "/app/courses/stats",
           },
         ],
       },

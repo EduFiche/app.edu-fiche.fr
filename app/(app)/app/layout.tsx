@@ -13,19 +13,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body>
-        <CSPostHogProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <CombinedSidebar>{children}</CombinedSidebar>
-          </ThemeProvider>
-        </CSPostHogProvider>
-      </body>
-    </html>
+    <CSPostHogProvider>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <CombinedSidebar>
+          <AppLayout>{children}</AppLayout>
+        </CombinedSidebar>
+      </ThemeProvider>
+    </CSPostHogProvider>
   );
+}
+
+function AppLayout({ children }: { children: React.ReactNode }) {
+  return <main className="p-4 w-full">{children}</main>;
 }
